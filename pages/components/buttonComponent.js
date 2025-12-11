@@ -26,7 +26,7 @@ export default function ButtonComponent({
   };
   
   // Combine all classes
-  const baseClasses = "font-normal rounded-lg w-full mt-3 transition-colors duration-200";
+  const baseClasses = "font-normal rounded-lg w-full mt-3 transition-all duration-200 ease-in-out transform hover:scale-[1.02] active:scale-[0.98]";
   const combinedClasses = `
     ${variantClasses[variant] || variantClasses.primary}
     ${sizeClasses[size] || sizeClasses.md}
