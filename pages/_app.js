@@ -10,6 +10,11 @@ export default function App({ Component, pageProps }) {
     document.body.className = theme;
   }, [theme]);
   
+  // Toggle between light and dark themes
+  const toggleTheme = () => {
+    setTheme(prevTheme => prevTheme === "light" ? "dark" : "light");
+  };
+  
   // Enhanced component with loading and error handling
   const EnhancedComponent = (props) => {
     // Show loading state during page transitions
@@ -33,7 +38,7 @@ export default function App({ Component, pageProps }) {
             <div className="h-full bg-yellow-500 animate-pulse"></div>
           </div>
         )}
-        <Component {...props} />
+        <Component {...props} theme={theme} toggleTheme={toggleTheme} />
       </>
     );
   };
