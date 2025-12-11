@@ -47,7 +47,7 @@ export default function CheckboxComponents({
   };
   
   // Combine all classes
-  const baseClasses = "rounded focus:ring-opacity-50 transition-colors";
+  const baseClasses = "rounded focus:ring-opacity-50 transition-colors duration-200 ease-in-out";
   const checkboxClasses = `
     form-checkbox
     ${sizeClasses[size] || sizeClasses.md}
@@ -59,7 +59,7 @@ export default function CheckboxComponents({
   const containerClasses = `
     flex justify-between items-center
     ${paddingClasses[size] || paddingClasses.md}
-    my-2 rounded-md hover:bg-gray-50 transition-colors
+    my-2 rounded-md hover:bg-gray-50 transition-all duration-200 ease-in-out transform hover:scale-[1.02]
     ${isDisabled ? "opacity-75" : ""}
   `.trim();
   
